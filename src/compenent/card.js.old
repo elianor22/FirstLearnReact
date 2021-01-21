@@ -1,0 +1,30 @@
+import React, { Component } from 'react'
+
+export default class App extends Component {
+
+    constructor(props){
+        super(props)
+        this.props = props
+
+    }
+
+
+    render() {
+        return (
+            <div className="card ml-2 mt-3" style={{width: "18rem"}}>
+                <img src={this.props.gambar} className="card-img-top" alt="..."/>
+                <div className="card-body">
+                    <h5 className="card-title">{this.props.title}</h5>
+                    <p className="card-text">{this.props.deskripsi}</p>
+                    <button href="#" className="btn btn-primary" onClick={this.hello} >Go somewhere</button>
+                </div>
+          </div>
+        )
+
+
+    }
+    hello = ()=>{
+        alert(`selamat datang ${this.props.title}`)
+    }
+}
+export default CardProduct;
